@@ -7,6 +7,8 @@
 
 Download ESM modules from npm and jsdelivr
 
+See [download-esm: a tool for downloading ECMAScript modules](https://simonwillison.net/2023/May/2/download-esm/) for background on this project.
+
 ## Installation
 
 Install this tool using `pip`:
