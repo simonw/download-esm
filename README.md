@@ -21,7 +21,7 @@ Your help welcome in testing this further!
 
 ## Usage
 
-To download Observable Plot and all of its dependencies as EcmaScript modules:
+To download Observable Plot and all of its dependencies as ECMAScript modules:
 
     download-esm @observablehq/plot
 
