@@ -19,26 +19,24 @@ def test_download_esm(mocks, use_directory):
             path = "js"
         files = {p.name for p in pathlib.Path(path).glob("**/*.js")}
         assert files == {
-            "observablehq-plot-0-6-6-src-index-js.js",
-            "d3-array-3-2-3m.js",
-            "isoformat-0-2-1m.js",
-            "d3-7-8-4m.js",
+            "observablehq-plot-0-6-6.js",
+            "d3-array-3-2-3.js",
+            "isoformat-0-2-1.js",
+            "d3-7-8-4.js",
         }
         # Check that code was rewritten
-        rewritten_plot = (
-            pathlib.Path(path) / "observablehq-plot-0-6-6-src-index-js.js"
-        ).read_text()
+        rewritten_plot = (pathlib.Path(path) / "observablehq-plot-0-6-6.js").read_text()
         assert (
-            'import {ascending as t,descending as n,least as $r} from "./d3-7-8-4m.js"'
+            'import {ascending as t,descending as n,least as $r} from "./d3-7-8-4.js"'
             in rewritten_plot
         )
         assert (
-            'import {parse as Mr,format as Lr} from "./isoformat-0-2-1m.js"'
+            'import {parse as Mr,format as Lr} from "./isoformat-0-2-1.js"'
             in rewritten_plot
         )
         # Check d3 too
-        rewritten_d3 = (pathlib.Path(path) / "d3-7-8-4m.js").read_text()
-        assert 'export * from "./d3-array-3-2-3m.js";' in rewritten_d3
+        rewritten_d3 = (pathlib.Path(path) / "d3-7-8-4.js").read_text()
+        assert 'export * from "./d3-array-3-2-3.js";' in rewritten_d3
 
 
 @pytest.fixture

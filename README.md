@@ -38,7 +38,7 @@ You can then use the library in your own HTML and JavaScript something like this
 ```html
 <div id="myplot"></div>
 <script type="module">
-import * as Plot from "./js/observablehq-plot-0-6-6-src-index-js.js";
+import * as Plot from "./js/observablehq-plot-0-6-6.js";
 const plot = Plot.rectY(
     {length: 10000}, Plot.binX({y: "count"}, {x: Math.random})
 ).plot();

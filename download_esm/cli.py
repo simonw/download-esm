@@ -71,7 +71,8 @@ def extract_original_file(content):
 
 def simplify_path(path):
     package_name, version = path.split("/npm/")[1].rsplit("@", 1)
-    version = version.replace(".", "-").replace("/+es", "")
+    version = version.split("/")[0]
+    version = version.replace(".", "-")
     simplified_name = f"{package_name}-{version}.js"
     return simplified_name.replace("@", "").replace("/", "-")
 
