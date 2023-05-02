@@ -15,7 +15,7 @@ Install this tool using `pip`:
 
 ## Warning
 
-This is **alpha software**. It works for downloading Observable Plot, but has not been tested against any other packages yet.
+This is **alpha software**. It works for downloading Observable Plot, but has not been tested against many other packages yet.
 
 [Your help welcome](https://github.com/simonw/download-esm/issues/2) in testing this further!
 
